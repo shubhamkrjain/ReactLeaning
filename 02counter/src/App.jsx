@@ -7,11 +7,13 @@ function App() {
   let [counter, setCounter] = useState(0)
 //let counter = 5;
   const addValue = () => {
-  //counter += 1;
-  console.log("Counter value:", counter);
-  
   if(counter < 20) {
-    setCounter(counter + 1);
+    setCounter((prevCounter) => prevCounter + 1);
+    // setCounter(counter + 1);
+    // setCounter(counter + 1);setCounter(counter + 1);setCounter(counter + 1); 
+    // Here it will send the value in patch and we are doing the name things
+    console.log("Counter value:", counter);
+    
   }
   
   console.log("Counter value:", counter);
